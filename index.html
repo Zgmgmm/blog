@@ -260,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/28/note/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/09/pyTip/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zgmgmm">
@@ -279,7 +279,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/28/note/" itemprop="url">学习笔记</a></h1>
+                <a class="post-title-link" href="/2019/03/09/pyTip/" itemprop="url">Python Tips</a></h1>
         
 
         <div class="post-meta">
@@ -291,8 +291,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-28T16:37:53+08:00">
-                2019-02-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-09T02:18:54+08:00">
+                2019-03-09
               </time>
             
 
@@ -331,71 +331,47 @@
       
         
           
-            <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><p>进程是资源分配单位，而线程是调度和执行单位；线程不拥有系统资源，但线程可以访问所属进程的资源</p>
-<h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><p><img src="http://on-img.com/chart_image/5b503d10e4b0edb750e0d4f8.png" alt></p>
-<h1 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h1><h2 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h2><h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><ol>
-<li>开放定址法</li>
-</ol>
-<ul>
-<li>线性探测再散列</li>
-<li>二次探测再散列</li>
-<li>伪随机探测再散列</li>
+            <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#pip%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E8%AE%BE%E7%BD%AE">pip国内镜像设置</a><ul>
+<li><a href="#%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E5%88%97%E8%A1%A8">国内镜像列表</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%B3%95">设置方法</a></li>
 </ul>
-<ol start="2">
-<li>再哈希法</li>
-<li><strong>链地址法(拉链法)</strong></li>
-<li>建立公共溢出区<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><h2 id="Volatile"><a href="#Volatile" class="headerlink" title="Volatile"></a>Volatile</h2><h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2></li>
-</ol>
-<ul>
-<li>初始容量<em>c</em></li>
-<li>加载因子<em>f</em></li>
-<li>HashMap和Hashtable的区别</li>
-<li>JDK8的优化</li>
-<li>非同步实现<h3 id="初始容量"><a href="#初始容量" class="headerlink" title="初始容量"></a>初始容量</h3>根据传入的初始容量用 <strong>tableSizeFor(c)</strong> 计算出合适的初始大小，这个算法很精妙,本质上是将 <strong>(c-1)</strong> 的二进制第一个1之后的位全变为1，最后再加回1从而得到不小于c且与c最接近的2次幂作为实际<strong>初始容量</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">static final int tableSizeFor(int cap) &#123;</span><br><span class="line">    int n = cap - 1;//10000000</span><br><span class="line">    n |= n &gt;&gt;&gt; 1;   //11000000</span><br><span class="line">    n |= n &gt;&gt;&gt; 2;   //11110000</span><br><span class="line">    n |= n &gt;&gt;&gt; 4;   //11111111</span><br><span class="line">    n |= n &gt;&gt;&gt; 8;</span><br><span class="line">    n |= n &gt;&gt;&gt; 16;</span><br><span class="line">    return (n &lt; 0) ? 1 : (n &gt;= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="加载因子"><a href="#加载因子" class="headerlink" title="加载因子"></a>加载因子</h3><p>当 <strong>size&gt;f*c</strong> 时扩容。<br>出于性能的权衡，默认为 <strong>0.75</strong></p>
-<h3 id="HashMap和Hashtable的区别"><a href="#HashMap和Hashtable的区别" class="headerlink" title="HashMap和Hashtable的区别"></a>HashMap和Hashtable的区别</h3><h3 id="JDK8的优化"><a href="#JDK8的优化" class="headerlink" title="JDK8的优化"></a>JDK8的优化</h3><p>当一个链表太长的时候，HashMap会动态的将它替换成一个红黑树</p>
-<h3 id="非同步实现"><a href="#非同步实现" class="headerlink" title="非同步实现"></a>非同步实现</h3><p>HashMap是线程不安全的，多线程下需手动同步，或者使用并发容器  <strong>ConcurrentHashMap</strong></p>
-<h2 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h2><h3 id="线程基础"><a href="#线程基础" class="headerlink" title="线程基础"></a>线程基础</h3><p><img src="http://img.blog.csdn.net/20130513144515474" alt><br>线程共包括以下5种状态：</p>
-<ol>
-<li>新建状态(New)         : 线程对象被创建后，就进入了新建状态。此时它和其他Java对象一样，仅仅由Java虚拟机分配了内存，并初始化其成员变量值。</li>
-<li>就绪状态(Runnable): 也被称为“可执行状态”。线程对象被调用了该对象的start()方法，该线程处于就绪状态。Java虚拟机会为其创建方法调用栈和程序计数器。处于就绪状态的线程，随时可能被CPU调度执行，取决于JVM中线程调度器的调度。</li>
-<li>运行状态(Running) : 线程获取CPU权限进行执行。需要注意的是，线程只能从就绪状态进入到运行状态。</li>
-<li>阻塞状态(Blocked)  : 阻塞状态是线程因为某种原因放弃CPU使用权，暂时停止运行。直到线程进入就绪状态，才有机会转到运行状态。阻塞的情况分三种：</li>
+<h1 id="pip国内镜像设置"><a href="#pip国内镜像设置" class="headerlink" title="pip国内镜像设置"></a>pip国内镜像设置</h1><h2 id="国内镜像列表"><a href="#国内镜像列表" class="headerlink" title="国内镜像列表"></a>国内镜像列表</h2><table>
+<thead>
+<tr>
+<th>源</th>
+<th>网址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>豆瓣</td>
+<td><a href="http://pypi.doubanio.com/simple/" target="_blank" rel="noopener">http://pypi.doubanio.com/simple/</a></td>
+</tr>
+<tr>
+<td>清华</td>
+<td><a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a></td>
+</tr>
+<tr>
+<td>科大</td>
+<td><a href="https://mirrors.ustc.edu.cn/pypi/web/simple/" target="_blank" rel="noopener">https://mirrors.ustc.edu.cn/pypi/web/simple/</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="设置方法"><a href="#设置方法" class="headerlink" title="设置方法"></a>设置方法</h2><ol>
+<li><p>临时使用</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设为默认  </p>
+<blockquote>
+<p><em>升级 pip 到最新的版本 (&gt;=10.0.0) 后进行配置</em></p>
+</blockquote>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install pip -U</span><br><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure></li>
 </ol>
-<ul>
-<li>等待阻塞 – 通过调用线程的wait()方法，让线程等待某工作的完成。</li>
-<li>同步阻塞 – 线程在获取synchronized同步锁失败(因为锁被其它线程所占用)，它会进入同步阻塞状态。</li>
-<li>其他阻塞 – 通过调用线程的sleep()或join()或发出了I/O请求时，线程会进入到阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入就绪状态。</li>
-</ul>
-<ol start="5">
-<li>死亡状态(Dead)    : 线程执行完了、因异常退出了run()方法或者直接调用该线程的stop()方法（容易导致死锁，现在已经不推荐使用），该线程结束生命周期。<h3 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h3><strong>synchronized</strong>关键字解决的是多个线程之间访问资源的同步性，synchronized关键字可以保证被它修饰的方法或者代码块在任意时刻只能有一个线程执行。</li>
-</ol>
-<h2 id="双重校验锁实现对象单例（线程安全）"><a href="#双重校验锁实现对象单例（线程安全）" class="headerlink" title="双重校验锁实现对象单例（线程安全）"></a>双重校验锁实现对象单例（线程安全）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line"></span><br><span class="line">    private volatile static Singleton uniqueInstance;</span><br><span class="line"></span><br><span class="line">    private Singleton() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static Singleton getUniqueInstance() &#123;</span><br><span class="line">        //先判断对象是否已经实例过，没有实例化过才进入加锁代码</span><br><span class="line">        if (uniqueInstance == null) &#123;</span><br><span class="line">            //类对象加锁</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">                if (uniqueInstance == null) &#123;</span><br><span class="line">                    uniqueInstance = new Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return uniqueInstance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>但是由于 JVM 具有指令重排的特性，执行顺序有可能变成 1-&gt;3-&gt;2。指令重排在单线程环境下不会出先问题，但是在多线程环境下会导致一个线程获得还没有初始化的实例。例如，线程 T1 执行了 1 和 3，此时 T2 调用 getUniqueInstance() 后发现 uniqueInstance 不为空，因此返回 uniqueInstance，但此时 uniqueInstance 还未被初始化。</p>
-<h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><h2 id="tail-amp-head"><a href="#tail-amp-head" class="headerlink" title="tail &amp; head"></a>tail &amp; head</h2><h1 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h1><h1 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h1><h2 id="三次握手与四次挥手"><a href="#三次握手与四次挥手" class="headerlink" title="三次握手与四次挥手"></a>三次握手与四次挥手</h2><h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><ol>
-<li>客户端syn</li>
-<li>服务器收到syn后发送ack+syn</li>
-<li>客户端收到ack+syn后发送ack</li>
-<li>传输数据</li>
-<li>A传输完毕，发送fin</li>
-<li>B收到ack后发送ack</li>
-<li>B传输完毕，发送fin,</li>
-<li>A发送ack，等待2MSL（最长报文段寿命）后关闭</li>
-<li>B收到ack后马上关闭<h2 id="在浏览器中输入url地址-gt-gt-显示主页的过程"><a href="#在浏览器中输入url地址-gt-gt-显示主页的过程" class="headerlink" title="在浏览器中输入url地址 -&gt;&gt; 显示主页的过程"></a>在浏览器中输入url地址 -&gt;&gt; 显示主页的过程</h2><img src="https://camo.githubusercontent.com/c7261a49ba596af8ab0029960a6507837279864e/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031382f342f31392f313632646235653938356161626462653f696d61676556696577322f302f772f313238302f682f3936302f666f726d61742f776562702f69676e6f72652d6572726f722f31" alt></li>
-<li>DNS查询</li>
-<li>浏览器缓存</li>
-<li>系统缓存（hosts）</li>
-<li>多级DNS查询</li>
-<li>发送HTTP/HTTPS请求</li>
-<li>服务器处理请求</li>
-<li>服务器发送响应</li>
-<li>浏览器解析显示响应</li>
-</ol>
-<h2 id="翻转链表"><a href="#翻转链表" class="headerlink" title="翻转链表"></a>翻转链表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">void reverse(LinkedList l)&#123;</span><br><span class="line">    Node head=l.first;</span><br><span class="line">    Node cur=head.next;</span><br><span class="line">    head.next=null;</span><br><span class="line">    while(cur!=null)&#123;</span><br><span class="line">        Node next=cur.next;</span><br><span class="line">        cur.next=head;</span><br><span class="line">        head=cur;</span><br><span class="line">        cur=next;</span><br><span class="line">    &#125;</span><br><span class="line">    l.first=head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="二叉搜索树第K大"><a href="#二叉搜索树第K大" class="headerlink" title="二叉搜索树第K大"></a>二叉搜索树第K大</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">int i=0;</span><br><span class="line">int k;</span><br><span class="line">Node kth;</span><br><span class="line">bool found;</span><br><span class="line">void kthInBST(Node *root)&#123;</span><br><span class="line">    if(found)</span><br><span class="line">        return;</span><br><span class="line">    kthInBST(root-&gt;right);</span><br><span class="line">    i++;</span><br><span class="line">    if(i==j)&#123;</span><br><span class="line">        kth=root;</span><br><span class="line">        found=true;</span><br><span class="line">    &#125;</span><br><span class="line">    kthInBST(root-&gt;right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -487,7 +463,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
