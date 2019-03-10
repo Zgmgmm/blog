@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="注释 多行注释   数值类型 空值 特殊运算 数值运算   拆包赋值 特殊语句 del pass   str r/R 取消转义（原始字符串） % 格式字符串   list 特点 方法   tuple 特点 陷阱   dict slice 条件语句 语法 特殊语法   三元表达式 列表解析  注释### 单行注释   1a=1#单行注释 多行注释1234567&apos;&apos;&apos;这是多行注释，用三个单引号&apos;&apos;&apos;">
+<meta name="description" content="目录 目录 pip国内镜像设置 国内镜像列表 设置方法    pip国内镜像设置国内镜像列表   源 网址     豆瓣 http://pypi.doubanio.com/simple/   清华 https://pypi.tuna.tsinghua.edu.cn/simple   科大 https://mirrors.ustc.edu.cn/pypi/web/simple/    设置方法 临时">
 <meta name="keywords" content="Python,Tips">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python Tips">
 <meta property="og:url" content="http://yoursite.com/2019/03/09/pyTip/index.html">
 <meta property="og:site_name" content="Zgmgmm&#39;s Blog">
-<meta property="og:description" content="注释 多行注释   数值类型 空值 特殊运算 数值运算   拆包赋值 特殊语句 del pass   str r/R 取消转义（原始字符串） % 格式字符串   list 特点 方法   tuple 特点 陷阱   dict slice 条件语句 语法 特殊语法   三元表达式 列表解析  注释### 单行注释   1a=1#单行注释 多行注释1234567&apos;&apos;&apos;这是多行注释，用三个单引号&apos;&apos;&apos;">
+<meta property="og:description" content="目录 目录 pip国内镜像设置 国内镜像列表 设置方法    pip国内镜像设置国内镜像列表   源 网址     豆瓣 http://pypi.doubanio.com/simple/   清华 https://pypi.tuna.tsinghua.edu.cn/simple   科大 https://mirrors.ustc.edu.cn/pypi/web/simple/    设置方法 临时">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-09T08:29:33.935Z">
+<meta property="og:updated_time" content="2019-03-08T18:27:45.436Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Tips">
-<meta name="twitter:description" content="注释 多行注释   数值类型 空值 特殊运算 数值运算   拆包赋值 特殊语句 del pass   str r/R 取消转义（原始字符串） % 格式字符串   list 特点 方法   tuple 特点 陷阱   dict slice 条件语句 语法 特殊语法   三元表达式 列表解析  注释### 单行注释   1a=1#单行注释 多行注释1234567&apos;&apos;&apos;这是多行注释，用三个单引号&apos;&apos;&apos;">
+<meta name="twitter:description" content="目录 目录 pip国内镜像设置 国内镜像列表 设置方法    pip国内镜像设置国内镜像列表   源 网址     豆瓣 http://pypi.doubanio.com/simple/   清华 https://pypi.tuna.tsinghua.edu.cn/simple   科大 https://mirrors.ustc.edu.cn/pypi/web/simple/    设置方法 临时">
 
 
 
@@ -330,176 +330,47 @@
       
 
       
-        <ul>
-<li><a href="#%E6%B3%A8%E9%87%8A">注释</a><ul>
-<li><a href="#%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A">多行注释</a></li>
+        <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#pip%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E8%AE%BE%E7%BD%AE">pip国内镜像设置</a><ul>
+<li><a href="#%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E5%88%97%E8%A1%A8">国内镜像列表</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%B3%95">设置方法</a></li>
 </ul>
 </li>
-<li><a href="#%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B">数值类型</a></li>
-<li><a href="#%E7%A9%BA%E5%80%BC">空值</a></li>
-<li><a href="#%E7%89%B9%E6%AE%8A%E8%BF%90%E7%AE%97">特殊运算</a><ul>
-<li><a href="#%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97">数值运算</a></li>
 </ul>
-</li>
-<li><a href="#%E6%8B%86%E5%8C%85%E8%B5%8B%E5%80%BC">拆包赋值</a></li>
-<li><a href="#%E7%89%B9%E6%AE%8A%E8%AF%AD%E5%8F%A5">特殊语句</a><ul>
-<li><a href="#del">del</a></li>
-<li><a href="#pass">pass</a></li>
-</ul>
-</li>
-<li><a href="#str">str</a><ul>
-<li><a href="#rr-%E5%8F%96%E6%B6%88%E8%BD%AC%E4%B9%89%E5%8E%9F%E5%A7%8B%E5%AD%97%E7%AC%A6%E4%B8%B2"><code>r</code>/<code>R</code> 取消转义（原始字符串）</a></li>
-<li><a href="#%E6%A0%BC%E5%BC%8F%E5%AD%97%E7%AC%A6%E4%B8%B2"><code>%</code> 格式字符串</a></li>
-</ul>
-</li>
-<li><a href="#list">list</a><ul>
-<li><a href="#%E7%89%B9%E7%82%B9">特点</a></li>
-<li><a href="#%E6%96%B9%E6%B3%95">方法</a></li>
-</ul>
-</li>
-<li><a href="#tuple">tuple</a><ul>
-<li><a href="#%E7%89%B9%E7%82%B9-1">特点</a></li>
-<li><a href="#%E9%99%B7%E9%98%B1">陷阱</a></li>
-</ul>
-</li>
-<li><a href="#dict">dict</a></li>
-<li><a href="#slice">slice</a></li>
-<li><a href="#%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5">条件语句</a><ul>
-<li><a href="#%E8%AF%AD%E6%B3%95">语法</a></li>
-<li><a href="#%E7%89%B9%E6%AE%8A%E8%AF%AD%E6%B3%95">特殊语法</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%89%E5%85%83%E8%A1%A8%E8%BE%BE%E5%BC%8F">三元表达式</a></li>
-<li><a href="#%E5%88%97%E8%A1%A8%E8%A7%A3%E6%9E%90">列表解析</a></li>
-</ul>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><pre><code>### 单行注释  
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">1</span><span class="comment">#单行注释</span></span><br></pre></td></tr></table></figure>
-<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">这是多行注释，用三个单引号</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">这是多行注释，用三个双引号</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><table>
+<h1 id="pip国内镜像设置"><a href="#pip国内镜像设置" class="headerlink" title="pip国内镜像设置"></a>pip国内镜像设置</h1><h2 id="国内镜像列表"><a href="#国内镜像列表" class="headerlink" title="国内镜像列表"></a>国内镜像列表</h2><table>
 <thead>
 <tr>
-<th>类型</th>
-<th>描述</th>
+<th>源</th>
+<th>网址</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>int</td>
-<td>无大小限制</td>
+<td>豆瓣</td>
+<td><a href="http://pypi.doubanio.com/simple/" target="_blank" rel="noopener">http://pypi.doubanio.com/simple/</a></td>
 </tr>
 <tr>
-<td>float</td>
-<td>Python 3.X对于浮点数默认的是提供17位数字的精度</td>
+<td>清华</td>
+<td><a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a></td>
 </tr>
 <tr>
-<td>complex</td>
-<td>复数，虚实部都是float</td>
+<td>科大</td>
+<td><a href="https://mirrors.ustc.edu.cn/pypi/web/simple/" target="_blank" rel="noopener">https://mirrors.ustc.edu.cn/pypi/web/simple/</a></td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h2 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h2><p>空值是Python里一个特殊的值，用<code>None</code>表示。</p>
-<hr>
-<h2 id="特殊运算"><a href="#特殊运算" class="headerlink" title="特殊运算"></a>特殊运算</h2><h3 id="数值运算"><a href="#数值运算" class="headerlink" title="数值运算"></a>数值运算</h3><ul>
-<li><code>//</code> 整除</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span>//<span class="number">3</span><span class="comment">#3</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><p><code>**</code> 乘方</p>
+<h2 id="设置方法"><a href="#设置方法" class="headerlink" title="设置方法"></a>设置方法</h2><ol>
+<li><p>临时使用</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>逻辑右移</p>
-</li>
-</ul>
-<p>python无逻辑右移<br>自己实现一个</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rshift</span><span class="params">(val, n)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> val&gt;&gt;n <span class="keyword">if</span> val &gt;= <span class="number">0</span> <span class="keyword">else</span> (val+<span class="number">0x100000000</span>)&gt;&gt;n</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span>**<span class="number">2</span><span class="comment">#100</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="拆包赋值"><a href="#拆包赋值" class="headerlink" title="拆包赋值"></a>拆包赋值</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a,b,c=<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span></span><br><span class="line">a,b,c=(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">a,b,c=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="特殊语句"><a href="#特殊语句" class="headerlink" title="特殊语句"></a>特殊语句</h2><h3 id="del"><a href="#del" class="headerlink" title="del"></a>del</h3><p>del用来删除引用<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a=<span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> a</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">NameError: name <span class="string">'a'</span> <span class="keyword">is</span> <span class="keyword">not</span> defined</span><br></pre></td></tr></table></figure></p>
-<h3 id="pass"><a href="#pass" class="headerlink" title="pass"></a>pass</h3><p>pass是一个空语句，仅用来占位使代码符合语法</p>
-<hr>
-<h2 id="str"><a href="#str" class="headerlink" title="str"></a>str</h2><h3 id="r-R-取消转义（原始字符串）"><a href="#r-R-取消转义（原始字符串）" class="headerlink" title="r/R 取消转义（原始字符串）"></a><code>r</code>/<code>R</code> 取消转义（原始字符串）</h3><p>前缀r使字符串不转义  <code>r&#39;123\n&#39;</code>等价于<code>&#39;123\\n&#39;</code></p>
-<h3 id="格式字符串"><a href="#格式字符串" class="headerlink" title="% 格式字符串"></a><code>%</code> 格式字符串</h3><table>
-<thead>
-<tr>
-<th>占位符</th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>%d</td>
-<td>整数</td>
-</tr>
-<tr>
-<td>%f</td>
-<td>浮点数</td>
-</tr>
-<tr>
-<td>%s</td>
-<td>字符串</td>
-</tr>
-<tr>
-<td>%x</td>
-<td>十六进制整数</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'hello  %s'</span> % <span class="string">'world'</span><span class="comment">#'hello  world'</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
-<li>可变（可修改包含的元素）</li>
-<li>支持Slice</li>
-</ul>
-<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
-<li><p>append(self, object, /)  </p>
-</li>
-<li><p>clear(self, /)  </p>
-</li>
-<li><p>copy(self, /)<br>  返回一个浅拷贝列表</p>
-</li>
-<li><p>count(self, value, /)</p>
-</li>
-<li><p>extend(self, iterable, /)<br>  追加iterable所有项</p>
-</li>
-<li><p>index(self, value, start=0, stop=2147483647, /)<br>  value不存在则抛出ValueError</p>
-</li>
-<li><p>insert(self, index, object, /)</p>
-</li>
-<li><p>pop(self, index=-1, /)<br>  删除并返回项  </p>
-<p>  index越界则抛出IndexError</p>
-</li>
-<li><p>remove(self, value, /)<br>  删除第一个value出现的位置的项<br>  value不存在则抛出ValueError</p>
-</li>
-<li><p>reverse(self, /)<br>  反转项的位置</p>
-</li>
-<li><p>sort(self, /, <em>, key=None, reverse=False)<br>  Stable sort </em>IN PLACE*.</p>
-</li>
-</ul>
-<hr>
-<h2 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h2><h3 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h3><ul>
-<li>不可变</li>
-</ul>
-<h3 id="陷阱"><a href="#陷阱" class="headerlink" title="陷阱"></a>陷阱</h3><ul>
-<li>空Tuple， <code>a=()</code></li>
-<li>一个元素的元组，<code>a=(1,)</code> 须加逗号，否则(1)解释为整数<code>1</code></li>
-</ul>
-<hr>
-<h2 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h2><p><code>dict</code>是一种关联容器，<code>key</code>的类型必须为不可变类型(int、flaot、str、tuple)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">d=&#123;</span><br><span class="line">  <span class="string">'name'</span>:<span class="string">'Mike'</span>,  <span class="comment">#str</span></span><br><span class="line">  <span class="number">1</span>:<span class="string">'1'</span>,        <span class="comment">#int </span></span><br><span class="line">  <span class="number">1.1</span>:<span class="number">1.11</span>,     <span class="comment">#float</span></span><br><span class="line">  ():(<span class="number">1</span>)        <span class="comment">#tuple</span></span><br><span class="line">&#125;</span><br><span class="line">v=d[<span class="string">'name'</span>]   <span class="comment">#获取</span></span><br><span class="line">d[<span class="string">'new key'</span>]=<span class="string">'init value'</span>  <span class="comment">#添加新项</span></span><br><span class="line">d[<span class="string">'new key'</span>]=<span class="string">'new value'</span>  <span class="comment">#修改新项</span></span><br><span class="line"><span class="keyword">del</span> d[<span class="string">'name'</span>]   <span class="comment">#删除该项</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#报错，type(key)不能为list</span></span><br><span class="line"><span class="comment">#d[[]]=1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#遍历</span></span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> d:</span><br><span class="line">  print(key,d[key],sep=<span class="string">' -&gt; '</span>)</span><br></pre></td></tr></table></figure></p>
-<hr>
-<h2 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h2><p>list[from:to:interval]<br>当from/to为负数，代表len-from/len</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">a[:]  <span class="comment">#[0,1,2,3,4,5]</span></span><br><span class="line">a[<span class="number">1</span>:] <span class="comment">#[1,2,3,4,5]</span></span><br><span class="line">a[:<span class="number">2</span>] <span class="comment">#[0,1]</span></span><br><span class="line">a[<span class="number">1</span>:<span class="number">2</span>]  <span class="comment">#[1]</span></span><br><span class="line">a[<span class="number">-2</span>:<span class="number">-1</span>]<span class="comment">#[4]</span></span><br><span class="line">a[<span class="number">0</span>::<span class="number">2</span>]<span class="comment">#[0,2,4]</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> a&gt;<span class="number">0</span>:</span><br><span class="line">  <span class="comment">#do something</span></span><br><span class="line"><span class="keyword">elif</span> a&lt;<span class="number">0</span>:</span><br><span class="line">  <span class="comment">#do something</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="comment">#do something</span></span><br></pre></td></tr></table></figure>
-<h3 id="特殊语法"><a href="#特殊语法" class="headerlink" title="特殊语法"></a>特殊语法</h3><p>只要x是非零数值、非空字符串、非空list等，就判断为True，否则为False。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> list()  <span class="keyword">or</span> <span class="string">''</span> <span class="keyword">or</span> <span class="literal">None</span>:</span><br><span class="line">  print(<span class="string">'this message will not display'</span>)</span><br><span class="line"><span class="keyword">if</span> [<span class="number">1</span>] <span class="keyword">and</span> <span class="string">'str'</span> <span class="keyword">and</span> <span class="number">1</span>:</span><br><span class="line">  print(<span class="string">'this message will display'</span>)</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="三元表达式"><a href="#三元表达式" class="headerlink" title="三元表达式"></a>三元表达式</h2><p><code>trueValue if condition else falseValue</code>  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">1</span> <span class="keyword">if</span> <span class="literal">False</span> <span class="keyword">else</span> <span class="number">2</span> <span class="comment">#a=2</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="列表解析"><a href="#列表解析" class="headerlink" title="列表解析"></a>列表解析</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">src=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">res=[x*x <span class="keyword">for</span> x <span class="keyword">in</span> src]</span><br><span class="line">res<span class="comment">#[1,4,9,16]</span></span><br></pre></td></tr></table></figure>
+<li><p>设为默认  </p>
+<blockquote>
+<p><em>升级 pip 到最新的版本 (&gt;=10.0.0) 后进行配置</em></p>
+</blockquote>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install pip -U</span><br><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure></li>
+</ol>
+
       
     </div>
     
@@ -527,6 +398,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/10/python/" rel="prev" title="Python Basics">
+                Python Basics <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -598,7 +485,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -646,7 +533,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">1.</span> <span class="nav-text">注释</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多行注释"><span class="nav-number">1.1.</span> <span class="nav-text">多行注释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值类型"><span class="nav-number">2.</span> <span class="nav-text">数值类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#空值"><span class="nav-number">3.</span> <span class="nav-text">空值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊运算"><span class="nav-number">4.</span> <span class="nav-text">特殊运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数值运算"><span class="nav-number">4.1.</span> <span class="nav-text">数值运算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拆包赋值"><span class="nav-number">5.</span> <span class="nav-text">拆包赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊语句"><span class="nav-number">6.</span> <span class="nav-text">特殊语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#del"><span class="nav-number">6.1.</span> <span class="nav-text">del</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pass"><span class="nav-number">6.2.</span> <span class="nav-text">pass</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#str"><span class="nav-number">7.</span> <span class="nav-text">str</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#r-R-取消转义（原始字符串）"><span class="nav-number">7.1.</span> <span class="nav-text">r/R 取消转义（原始字符串）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式字符串"><span class="nav-number">7.2.</span> <span class="nav-text">% 格式字符串</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list"><span class="nav-number">8.</span> <span class="nav-text">list</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">8.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">8.2.</span> <span class="nav-text">方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tuple"><span class="nav-number">9.</span> <span class="nav-text">tuple</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点-1"><span class="nav-number">9.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#陷阱"><span class="nav-number">9.2.</span> <span class="nav-text">陷阱</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dict"><span class="nav-number">10.</span> <span class="nav-text">dict</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#slice"><span class="nav-number">11.</span> <span class="nav-text">slice</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件语句"><span class="nav-number">12.</span> <span class="nav-text">条件语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">12.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊语法"><span class="nav-number">12.2.</span> <span class="nav-text">特殊语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三元表达式"><span class="nav-number">13.</span> <span class="nav-text">三元表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表解析"><span class="nav-number">14.</span> <span class="nav-text">列表解析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pip国内镜像设置"><span class="nav-number">2.</span> <span class="nav-text">pip国内镜像设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#国内镜像列表"><span class="nav-number">2.1.</span> <span class="nav-text">国内镜像列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置方法"><span class="nav-number">2.2.</span> <span class="nav-text">设置方法</span></a></li></ol></li></ol></div>
             
 
           </div>
