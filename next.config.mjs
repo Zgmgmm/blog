@@ -4,7 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: 'https://zgmgmm.github.io/', // 使用仓库名称作为前缀
+  assetPrefix: '/zgmgmm.github.io/',
+  basePath: '/zgmgmm.github.io',
 };
 
 export default nextConfig;
