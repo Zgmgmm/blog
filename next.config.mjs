@@ -4,7 +4,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: '/zgmgmm.github.io/',
   basePath: '/zgmgmm.github.io',
 };
 
