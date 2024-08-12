@@ -4,7 +4,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/zgmgmm.github.io',
 };
 
 export default nextConfig;
