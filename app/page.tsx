@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { GlobeAltIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
+import { GlobeAltIcon, EnvelopeIcon, ServerIcon as DatabaseIcon } from '@heroicons/react/24/solid';
+import Articles from '../components/Articles';  
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("about");
@@ -51,9 +52,17 @@ export default function Home() {
       case "timeline":
         return <Timeline />;
       case "articles":
-        return <Articles />;
-      case "reading":
-        return <div className="text-gray-700">Reading list...</div>;
+        const articlesData = [
+          {
+            title: "什么是好的编程实践",
+            description: "关于如何有效地练习编程的简短说明。",
+            link: "https://rohitpaulk.com/articles/what-good-programming-practice-feels-like",
+          },
+          // ... 其他文章数据
+        ];
+        return <Articles articles={articlesData} />;
+      case "projects":
+        return <Projects />;
       case "elsewhere":
         return <div className="text-gray-700">Other links...</div>;
       default:
@@ -93,54 +102,43 @@ export default function Home() {
       </ol>
     );
   };
-
-  const Articles = () => {
-    const articles = [
+ 
+  const Projects = () => {
+    const projects = [
       {
-        title: "React性能优化的5个关键技巧",
-        link: "https://example.com/react-performance-tips",
-        date: "2023-05-15"
+        name: "LevelDB",
+        description: "快速键值存储库提供从字符串键到字符串值的有序映射。",
+        Icon: DatabaseIcon,
+        link: "https://github.com/google/leveldb"
       },
       {
-        title: "深入理解JavaScript的异步编程",
-        link: "https://example.com/javascript-async-programming",
-        date: "2023-04-22"
+        name: "PostgreSQL",
+        description: "强大的开源对象关系数据库系统拥有超过30年的积极开发历史。",
+        Icon: DatabaseIcon,
+        link: "https://github.com/postgres/postgres"
       },
-      {
-        title: "使用Docker简化你的开发环境配置",
-        link: "https://example.com/docker-dev-environment",
-        date: "2023-03-10"
-      },
-      {
-        title: "GraphQL vs REST API:何时使用哪个?",
-        link: "https://example.com/graphql-vs-rest",
-        date: "2023-02-28"
-      },
-      {
-        title: "TypeScript高级类型技巧",
-        link: "https://example.com/typescript-advanced-types",
-        date: "2023-01-15"
-      }
+      // 您可以在这里添加更多项目...
     ];
 
     return (
       <div className="space-y-4">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">文章</h2>
-        <ul className="space-y-4">
-          {articles.map((article, index) => (
-            <li key={index} className="border-b pb-4 last:border-b-0">
-              <a 
-                href={article.link}
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline dark:text-blue-400 text-lg font-semibold"
-              >
-                {article.title}
-              </a>
-              <p className="text-sm text-gray-500 mt-1">{article.date}</p>
-            </li>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {projects.map((project, index) => (
+            <a 
+              key={index}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div className="p-4 flex flex-col items-center">
+                <project.Icon className="w-24 h-24 text-blue-500 mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 text-center">{project.name}</h3>
+                <p className="text-sm text-gray-600 mt-2 text-center">{project.description}</p>
+              </div>
+            </a>
           ))}
-        </ul>
+        </div>
       </div>
     );
   };
@@ -152,7 +150,7 @@ export default function Home() {
           {/* <h1 className="text-4xl font-bold text-center text-gray-900">Your Name</h1> */}
         </header>
         <nav className="flex justify-center space-x-4 border-b pb-4 mb-8">
-          {["about", "timeline", "articles", "reading", "elsewhere"].map((tab) => (
+          {["about", "timeline", "articles", "projects", "elsewhere"].map((tab) => (
             <button
               key={tab}
               className={`px-4 py-2 text-gray-700 hover:text-gray-900 ${activeTab === tab ? "border-b-2 border-green-600 text-gray-900" : ""}`}
