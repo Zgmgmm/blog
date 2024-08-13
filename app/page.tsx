@@ -14,16 +14,16 @@ export default function Home() {
           <div>
             <h2 className="text-2xl font-bold mb-4 text-gray-900">Hello!</h2>
             <p className="mb-4 text-gray-700">
-              I'm a software engineer focused on building reliable, readable, and maintainable software. I'm also interested in teaching software development and helping people improve their personal productivity.
+              I am a software engineer focused on building reliable, readable, and maintainable software. I am also interested in teaching software development and helping people improve their personal productivity.
             </p>
             <p className="mb-4 text-gray-700">
-              Currently, I'm working on an advanced programming challenges website based on "Build Your Own X" tutorials.
+              Currently, I am working on an advanced programming challenges website based on &ldquo;Build Your Own X&rdquo; tutorials.
             </p>
             <p className="mb-4 text-gray-700">
-              I've worked full-time at several companies, including Company A, Company B, and Company C. I've also consulted for various companies such as Company D and Company E.
+              I have worked full-time at several companies, including Company A, Company B, and Company C. I have also consulted for various companies such as Company D and Company E.
             </p>
             <p className="mb-4 text-gray-700">
-              I'm a happy husband and a proud cat parent to a mischievous feline.
+              I am a happy husband and a proud cat parent to a mischievous feline.
             </p>
             <p className="mb-8 text-gray-500">Last updated: May 1, 2023</p>
             
