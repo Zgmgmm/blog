@@ -4,6 +4,16 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
+  --font-pacifico: Pacifico, cursive;
+  --font-lobster: Lobster, cursive;
+}
+
+.font-pacifico {
+  font-family: var(--font-pacifico);
+}
+
+.font-lobster {
+  font-family: var(--font-lobster);
 }
 
 body {

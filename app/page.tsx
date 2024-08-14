@@ -273,9 +273,9 @@ export default function Home() {
               color="#bbf7d0"
             >
               <button
-                className={`px-4 py-2 text-3xl font-pacifico ${
-                  activeTab === tab ? 'text-gray-900' : 'text-gray-500'
-                } hover:text-gray-700 transition-colors duration-200`}
+                className={`px-4 py-2 text-3xl font-lobster ${
+                  activeTab === tab ? 'text-gray-9000' : 'text-gray-500'
+                } hover:text-gray-7000 transition-colors duration-200`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab}

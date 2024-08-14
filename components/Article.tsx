@@ -37,6 +37,7 @@ const Article: React.FC<ArticleProps> = ({ title, description, link, modifiedDat
                     strokeWidth={2}
                     padding={2}
                     iterations={2}
+                    animationDuration={200}
                 >
                     <h2 className="text-m font-semibold text-gray-800 group-hover:text-gray-600 transition-colors duration-200">
                         {title}
