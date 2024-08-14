@@ -5,6 +5,8 @@ interface ArticleData {
     title: string;
     description: string;
     link: string;
+    modifiedDate: string;  
+    categories: string[];  
 }
 
 interface ArticlesProps {
