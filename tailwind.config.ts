@@ -22,6 +22,12 @@ const config: Config = {
           '100%': { opacity: '1' },
         },
       },
+      fontFamily: {
+        'playfair': ['"Playfair Display"', 'serif'],
+        'dancing': ['"Dancing Script"', 'cursive'],
+        'pacifico': ['"Pacifico"', 'cursive'],
+        'lobster': ['"Lobster"', 'cursive'],
+      },
     },
   },
   plugins: [],

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { GlobeAltIcon, EnvelopeIcon, ServerIcon as DatabaseIcon } from '@heroicons/react/24/solid';
+import { GlobeAltIcon, EnvelopeIcon, ServerIcon as DatabaseIcon, ServerIcon, MagnifyingGlassIcon as SearchIcon, CubeIcon, CloudIcon, CpuChipIcon as ChipIconOutline, CodeBracketIcon } from '@heroicons/react/24/solid';
 import Articles from '../components/Articles';  
 import { RoughNotation } from "react-rough-notation";
 
@@ -60,74 +60,85 @@ export default function Home() {
             description: "探讨Go语言中提升性能的关键策略和最佳实践。",
             link: "https://example.com/go-performance-tips",
             modifiedDate: "2023-05-15",
+            categories: ["Go", "性能优化", "编程技巧"]
           },
           {
             title: "🐘 PostgreSQL索引优化指南",
             description: "深入了解PostgreSQL索引类型及其对查询性能的影响。",
             link: "https://example.com/postgresql-index-optimization",
             modifiedDate: "2023-05-10",
+            categories: ["PostgreSQL", "数据库", "性能优化"]
           },
           {
             title: "📊 Kafka流处理实战",
             description: "使用Kafka构建实时数据管道的实用指南。",
             link: "https://example.com/kafka-stream-processing",
             modifiedDate: "2023-05-05",
+            categories: ["Kafka", "流处理", "大数据"]
           },
           {
             title: "🔒 Go语言并发编程模式",
             description: "探索Go中的goroutines和channels，以及常见的并发模式。",
             link: "https://example.com/go-concurrency-patterns",
             modifiedDate: "2023-04-30",
+            categories: ["Go", "并发编程", "编程模式"]
           },
           {
             title: "🔍 PostgreSQL查询优化技巧",
             description: "提高PostgreSQL查询效率的实用技巧和工具。",
             link: "https://example.com/postgresql-query-optimization",
             modifiedDate: "2023-04-25",
+            categories: ["PostgreSQL", "数据库", "查询优化"]
           },
           {
             title: "⚖️ Kafka集群扩展策略",
             description: "如何有效地扩展Kafka集群以处理大规模数据流。",
             link: "https://example.com/kafka-cluster-scaling",
             modifiedDate: "2023-04-20",
+            categories: ["Kafka", "集群扩展", "大数据"]
           },
           {
             title: "🧪 Go语言测试最佳实践",
             description: "编写高质量、可维护的Go测试代码的指南。",
             link: "https://example.com/go-testing-best-practices",
             modifiedDate: "2023-04-15",
+            categories: ["Go", "测试", "最佳实践"]
           },
           {
             title: "🔐 PostgreSQL数据安全最佳实践",
             description: "保护PostgreSQL数据库免受常见安全威胁的策略。",
             link: "https://example.com/postgresql-security-practices",
             modifiedDate: "2023-04-10",
+            categories: ["PostgreSQL", "数据库", "安全"]
           },
           {
             title: "📈 Kafka性能调优指南",
             description: "优化Kafka生产者、消费者和broker配置以提高吞吐量。",
             link: "https://example.com/kafka-performance-tuning",
             modifiedDate: "2023-04-05",
+            categories: ["Kafka", "性能优化", "配置调优"]
           },
           {
             title: "🌐 Go语言微服务架构设计",
             description: "使用Go构建可扩展、弹性的微服务系统的原则和模式。",
             link: "https://example.com/go-microservices-architecture",
             modifiedDate: "2023-03-31",
+            categories: ["Go", "微服务", "架构设计"]
           },
           {
             title: "📊 PostgreSQL时间序列数据处理",
             description: "高效存储和查询PostgreSQL中的时间序列数据。",
             link: "https://example.com/postgresql-time-series-data",
             modifiedDate: "2023-03-26",
+            categories: ["PostgreSQL", "时间序列", "数据处理"]
           },
           {
             title: "🔗 Kafka与大数据生态系统集成",
             description: "将Kafka与Hadoop、Spark和Flink等大数据工具集成的指南。",
             link: "https://example.com/kafka-big-data-integration",
             modifiedDate: "2023-03-21",
-          },
-          // ... 其他文章数据
+            categories: ["Kafka", "大数据", "系统集成"]
+          }
         ];
         return <Articles articles={articlesData} />;
       case "Projects":
@@ -164,17 +175,64 @@ export default function Home() {
     const projects = [
       {
         name: "LevelDB",
-        description: "快速键值存储库提供从字符串键到字符串值的有序映射。",
+        description: "快速键值存储库,提供从字符串键到字符串值的有序映射。",
         Icon: DatabaseIcon,
         link: "https://github.com/google/leveldb"
       },
       {
         name: "PostgreSQL",
-        description: "强大的开源对象关系数据库系统拥有超过30年的积极开发历史。",
+        description: "强大的开源对象关系数据库系统,拥有超过30年的积极开发历史。",
         Icon: DatabaseIcon,
         link: "https://github.com/postgres/postgres"
       },
-      // 您可以在这里添加更多项目...
+      {
+        name: "Kafka",
+        description: "高吞吐量分布式消息系统,用于构建实时数据管道和流处理应用。",
+        Icon: ServerIcon,
+        link: "https://github.com/apache/kafka"
+      },
+      {
+        name: "Redis",
+        description: "内存数据结构存储,用作数据库、缓存和消息代理。",
+        Icon: DatabaseIcon,
+        link: "https://github.com/redis/redis"
+      },
+      {
+        name: "Elasticsearch",
+        description: "分布式搜索和分析引擎,适用于全文搜索、结构化搜索和分析。",
+        Icon: SearchIcon,
+        link: "https://github.com/elastic/elasticsearch"
+      },
+      {
+        name: "Docker",
+        description: "开源容器化平台,简化应用程序的构建、打包和部署过程。",
+        Icon: CubeIcon,
+        link: "https://github.com/docker/docker-ce"
+      },
+      {
+        name: "Kubernetes",
+        description: "自动化容器部署、扩展和管理的开源系统。",
+        Icon: CloudIcon,
+        link: "https://github.com/kubernetes/kubernetes"
+      },
+      {
+        name: "TensorFlow",
+        description: "开源机器学习框架,用于构建和部署机器学习模型。",
+        Icon: ChipIconOutline,
+        link: "https://github.com/tensorflow/tensorflow"
+      },
+      {
+        name: "React",
+        description: "用于构建用户界面的JavaScript库,专注于组件化开发。",
+        Icon: CodeBracketIcon,
+        link: "https://github.com/facebook/react"
+      },
+      {
+        name: "Node.js",
+        description: "基于Chrome V8 JavaScript引擎的JavaScript运行时。",
+        Icon: ServerIcon,
+        link: "https://github.com/nodejs/node"
+      }
     ];
 
     return (
@@ -186,7 +244,7 @@ export default function Home() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              className="block bg-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <div className="p-4 flex flex-col items-center">
                 <project.Icon className="w-24 h-24 text-blue-500 mb-4" />
@@ -215,7 +273,9 @@ export default function Home() {
               color="#bbf7d0"
             >
               <button
-                className={`px-4 py-2 text-lg font-bold ${activeTab === tab ? 'text-gray-900' : 'text-gray-500'}`}
+                className={`px-4 py-2 text-3xl font-pacifico ${
+                  activeTab === tab ? 'text-gray-900' : 'text-gray-500'
+                } hover:text-gray-700 transition-colors duration-200`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab}

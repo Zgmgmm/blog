@@ -6,15 +6,24 @@ interface ArticleProps {
     description: string;
     link: string;
     modifiedDate: string;
+    categories: string[];
 }
 
-const Article: React.FC<ArticleProps> = ({ title, description, link, modifiedDate }) => {
+const Article: React.FC<ArticleProps> = ({ title, description, link, modifiedDate, categories }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className="mb-8"
+        <div className="mb-8 relative"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}>
+            {/* 分类标签 */}
+            <div className="absolute top-0 right-0 flex flex-wrap gap-2 justify-end">
+                {categories.map((category, index) => (
+                    <span key={index} className="px-2 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors duration-200">
+                        {category}
+                    </span>
+                ))}
+            </div>
             <a
                 href={link}
                 target="_blank"
